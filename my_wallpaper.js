@@ -2,8 +2,9 @@
 let rect_width  = 20;
 let rect_height = 20;
 let tardisBlue = "#003b6f";
-let tS = 2.5; //tardis Size
+let tS = .5; //tardis Size
 let tY = 10 //tardis location 
+
 
 
 
@@ -16,6 +17,8 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
+  angleMode(DEGREES)
+
 }
 
 function wallpaper_background() {
@@ -134,6 +137,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   textSize(.65*tS)
   text("PULL TO OPEN",24.7*tS,27.5*tS+tY)
 
+  //Cyberman Start
+  noFill()
+  arc(50,50,25,20,40,500)
+  arc(35,58,10,10,40,500)
 
   
 
