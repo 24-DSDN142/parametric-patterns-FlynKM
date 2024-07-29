@@ -2,30 +2,39 @@
 let rect_width  = 20;
 let rect_height = 20;
 let tardisBlue = "#003b6f";
-let tS = .5; //tardis Size
-let tY = 10 //tardis location 
+let tS = 1.5; //tardis Size
+let tY = 20 //tardis location 
+let starOne = 150//star location
+let starTwo = 200
+
 
 
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
+  
+ 
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 100;
   angleMode(DEGREES)
 
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+  background("#43109a"); 
+  
+
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+
+
 
   fill(tardisBlue)
   rect(20.0*tS,10.0*tS+tY,20.0*tS,40.0*tS)
@@ -138,12 +147,46 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   text("PULL TO OPEN",24.7*tS,27.5*tS+tY)
 
   //Cyberman Start
-  noFill()
-  arc(50,50,25,20,40,500)
-  arc(35,58,10,10,40,500)
+  // noFill()
+  // arc(50,50,25,20,40,500)
+  // arc(35,58,10,10,40,500)
 
-  
+ drawStar1()
+ drawStar2()
+ 
 
+}
 
+function drawStar1() {
+    
+  fill(500)
+
+  beginShape() //star
+  vertex(-3+starOne, 3+starOne);
+  vertex(0+starOne, 10+starOne);
+  vertex(3+starOne, 3+starOne);
+  vertex(10+starOne, 0+starOne);
+  vertex(3+starOne, -3+starOne);
+  vertex(0+starOne, -10+starOne);
+  vertex(-3+starOne, -3+starOne);
+  vertex(-10+starOne, 0+starOne);
+  endShape(CLOSE)
+
+}
+
+function drawStar2() {
+    
+  fill(500)
+
+  beginShape() //star
+  vertex(-3+starTwo, 3+starTwo);
+  vertex(0+starTwo, 10+starTwo);
+  vertex(3+starTwo, 3+starTwo);
+  vertex(10+starTwo, 0+starTwo);
+  vertex(3+starTwo, -3+starTwo);
+  vertex(0+starTwo, -10+starTwo);
+  vertex(-3+starTwo, -3+starTwo);
+  vertex(-10+starTwo, 0+starTwo);
+  endShape(CLOSE)
 
 }
