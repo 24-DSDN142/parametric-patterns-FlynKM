@@ -175,7 +175,7 @@ function drawStar1() {
 }
 
 function drawStar2() {
-    
+  
   fill(500)
 
   beginShape() //star
