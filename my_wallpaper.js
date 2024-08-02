@@ -1,7 +1,7 @@
 //your parameter variables go here!
 let rect_width  = 20;
 let rect_height = 20;
-let tardisBlue = "#003b6f";
+let tardisBlue = "#003b6f";//003b6f
 let tS = 5.5; //tardis Size
 let tY = 25 //tardis location y
 let tX = 25  //tardis location x
@@ -12,7 +12,7 @@ let starTwoY = 20 //20
 let starThreeX = 190 //190
 let starThreeY = 130 //130
 let arcSize = 90//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
-let bgColour = "#43109a"
+let bgColour = "#43109a" //#43109a
 let gallifreyan = 2
 
 
