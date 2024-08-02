@@ -2,19 +2,24 @@
 let rect_width  = 20;
 let rect_height = 20;
 let tardisBlue = "#003b6f";
-let tS = 2.5; //tardis Size
+let tS = 2.4; //tardis Size
 let tY = 25 //tardis location y
 let tX = 25  //tardis location x
-let starOne = 170//star location
-let starTwo = 10
-let starThree = 90
+let starOneX = 160//star location
+let starOneY = 160
+let starTwoX = 10
+let starTwoY = 10
+let starThreeX = 190
+let starThreeY = 140
+let arcSize = 50
+let bgColour = "#43109a"
 
 
 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
   
  
@@ -28,7 +33,17 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background("#43109a"); 
+  if(tS >=2.5) {
+
+    background(bgColour)
+
+  }
+
+  if (tS <2.5) {
+
+    background(229, 51, 94 )
+    
+  }; 
   
 
 }
@@ -36,8 +51,46 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
 
+  noFill()
+  strokeWeight(30)
+  
+  
+  if(tS >=2.5) {
 
-  fill(tardisBlue)
+    stroke("#2b0768")
+
+  }
+
+  if (tS <2.5) {
+
+    stroke(216, 18, 66)
+    
+  }; 
+  
+
+  arc(185,35,arcSize,arcSize,345,135) //arc(195,32,50,50,345,135)
+  arc(148,69,arcSize,arcSize,145,315)
+  arc(111,103,arcSize,arcSize,315,145)
+  arc(54,143,arcSize,arcSize,145,315)
+  arc(17,177,arcSize,arcSize,315,145)
+  
+  
+
+  strokeWeight(1)
+  stroke(0)
+  if(tS >=2.5) {
+
+    fill(tardisBlue)
+
+  }
+
+  if (tS <2.5) {
+
+    fill(203, 20, 65)
+
+  }
+    
+
   rect(20.0*tS+tX,10.0*tS+tY,20.0*tS,40.0*tS)
   rect(19.0*tS+tX,5.5*tS+tY,22.0*tS,2.5*tS)
   rect(18.0*tS+tX,7.0*tS+tY,2.0*tS,43.5*tS) //side panel
@@ -99,11 +152,32 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rect(34.4*tS+tX,15.8*tS+tY,1.7*tS,3.2*tS)
   rect(36.4*tS+tX,15.8*tS+tY,1.7*tS,3.2*tS) //windows
 
-  fill(tardisBlue) //panels
+   if(tS >=2.5) {
+
+    fill(tardisBlue)
+
+  }
+
+  if (tS <2.5) {
+
+    fill(203, 20, 65)
+    
+  }
   rect(21.5*tS+tX,21.0*tS+tY,6.5*tS,7.3*tS) 
   fill(500)
   rect(22.2*tS+tX,21.5*tS+tY,5.0*tS,6.3*tS)
-  fill(tardisBlue)
+  if(tS >=2.5) {
+
+    fill(tardisBlue)
+
+  }
+
+  if (tS <2.5) {
+
+    fill(203, 20, 65)
+    
+  }
+
   rect(32.0*tS+tX,21.0*tS+tY,6.5*tS,7.3*tS)
 
   rect(21.5*tS+tX,30.0*tS+tY,6.5*tS,7.3*tS)
@@ -147,31 +221,32 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   textSize(.65*tS)
   text("PULL TO OPEN",24.7*tS+tX,27.5*tS+tY)
 
-  //Cyberman Start
-  // noFill()
-  // arc(50,50,25,20,40,500)
-  // arc(35,58,10,10,40,500)
-
  drawStar1()
  drawStar2()
- if(starTwo =>100){
+ if(starTwoX =>100){
 
   drawStar3()  
  }
  
- beginShape()
-  vertex(15*tS+tX,15*tS+tY)
-  vertex(10*tS+tX,10*tS+tY)
-  vertex(8*tS+tX,12*tS+tY)
-  vertex(6*tS+tX,11*tS+tY)
-  vertex(4*tS+tX,7*tS+tY)
-  vertex(2*tS+tX,9*tS+tY)
-  vertex(-3*tS+tX,2*tS+tY)
-  vertex(2*tS+tX,-3*tS+tY)
-  vertex(3*tS+tX,2*tS+tY)
-  vertex(4*tS+tX,2*tS+tY)
-  vertex(5*tS+tX,10*tS+tY)
+//  beginShape() //lightning
 
+//   vertex(15*tS+tX,17*tS+tY) //1
+//   vertex(10*tS+tX,13*tS+tY)//2
+//   vertex(6*tS+tX,13*tS+tY)//3
+//   vertex(3*tS+tX,10*tS+tY)//4
+//   vertex(-1*tS+tX,10*tS+tY) //5
+//   vertex(-6*tS+tX,2*tS+tY)//6
+//   vertex(1*tS+tX,-4*tS+tY)//7
+//   vertex(4*tS+tX,6*tS+tY)//8
+//   vertex(6*tS+tX,6*tS+tY)//9
+//   vertex(8*tS+tX,10*tS+tY)//10
+//   vertex(11*tS+tX,10*tS+tY)//11
+
+// endShape(CLOSE)
+
+beginShape() //lightning
+
+vertex
 
 endShape(CLOSE)
 
@@ -182,14 +257,14 @@ function drawStar1() {
   fill(500)
 
   beginShape() //star
-  vertex(-3+starOne, 3+starOne);
-  vertex(0+starOne, 10+starOne);
-  vertex(3+starOne, 3+starOne);
-  vertex(10+starOne, 0+starOne);
-  vertex(3+starOne, -3+starOne);
-  vertex(0+starOne, -10+starOne);
-  vertex(-3+starOne, -3+starOne);
-  vertex(-10+starOne, 0+starOne);
+  vertex(7+starOneX, 13+starOneY);
+  vertex(10+starOneX, 20+starOneY);
+  vertex(13+starOneX, 13+starOneY);
+  vertex(20+starOneX, 10+starOneY);
+  vertex(13+starOneX, 7+starOneY);
+  vertex(10+starOneX, 0+starOneY);
+  vertex(7+starOneX, 7+starOneY);
+  vertex(0+starOneX, 10+starOneY);
   endShape(CLOSE)
 
 }
@@ -199,14 +274,14 @@ function drawStar2() {
   fill(500)
 
   beginShape() //star
-  vertex(-3+starTwo, 3+starTwo);
-  vertex(0+starTwo, 10+starTwo);
-  vertex(3+starTwo, 3+starTwo);
-  vertex(10+starTwo, 0+starTwo);
-  vertex(3+starTwo, -3+starTwo);
-  vertex(0+starTwo, -10+starTwo);
-  vertex(-3+starTwo, -3+starTwo);
-  vertex(-10+starTwo, 0+starTwo);
+  vertex(-3+starTwoX, 3+starTwoY);
+  vertex(0+starTwoX, 10+starTwoY);
+  vertex(3+starTwoX, 3+starTwoY);
+  vertex(10+starTwoX, 0+starTwoY);
+  vertex(3+starTwoX, -3+starTwoY);
+  vertex(0+starTwoX, -10+starTwoY);
+  vertex(-3+starTwoX, -3+starTwoY);
+  vertex(-10+starTwoX, 0+starTwoY);
   endShape(CLOSE)
 
 }
@@ -216,14 +291,15 @@ function drawStar3() {
   fill(500)
 
   beginShape() //star
-  vertex(-3+starThree, 3+starThree);
-  vertex(0+starThree, 10+starThree);
-  vertex(3+starThree, 3+starThree);
-  vertex(10+starThree, 0+starThree);
-  vertex(3+starThree, -3+starThree);
-  vertex(0+starThree, -10+starThree);
-  vertex(-3+starThree, -3+starThree);
-  vertex(-10+starThree, 0+starThree);
+  vertex(-3+starThreeX, 3+starThreeY);
+  vertex(0+starThreeX, 10+starThreeY);
+  vertex(3+starThreeX, 3+starThreeY);
+  vertex(10+starThreeX, 0+starThreeY);
+  vertex(3+starThreeX, -3+starThreeY);
+  vertex(0+starThreeX, -10+starThreeY);
+  vertex(-3+starThreeX, -3+starThreeY);
+  vertex(-10+starThreeX, 0+starThreeY);
   endShape(CLOSE)
 
 }
+
