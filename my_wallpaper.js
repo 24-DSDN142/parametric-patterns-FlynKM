@@ -2,19 +2,18 @@
 let rect_width  = 20;
 let rect_height = 20;
 let tardisBlue = "#003b6f";
-let tS = 2.5; //tardis Size
+let tS = 5.5; //tardis Size
 let tY = 25 //tardis location y
 let tX = 25  //tardis location x
-let starOneX = 160//star location
-let starOneY = 160
-let starTwoX = 10
-let starTwoY = 10
-let starThreeX = 190
-let starThreeY = 140
-let arcSize = 50
+let starOneX = 160//star locations 160
+let starOneY = 140 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 190 //190
+let starThreeY = 130 //130
+let arcSize = 90//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
 let bgColour = "#43109a"
-
-
+let gallifreyan = 2
 
 
 function setup_wallpaper(pWallpaper) {
@@ -34,12 +33,12 @@ function setup_wallpaper(pWallpaper) {
 
 function wallpaper_background() {
   if(tS >=2.5) {
-
     background(bgColour)
 
   }
 
-  if (tS <2.5) {
+  if (tS <2.5) {//changes background to pink if Tardis is smaller than 2.5
+
 
     background(229, 51, 94 )
     
@@ -56,24 +55,32 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
   
   if(tS >=2.5) {
-
     stroke("#2b0768")
 
   }
 
-  if (tS <2.5) {
+  if (tS <2.5) {//changes stroke to pink if Tardis is smaller than 2.5
+
 
     stroke(216, 18, 66)
     
   }; 
   
 
-  arc(185,35,arcSize,arcSize,345,135) //arc(195,32,50,50,345,135)
+  arc(185,35,arcSize,arcSize,345,135) //squiggle in bg
   arc(148,69,arcSize,arcSize,145,315)
   arc(111,103,arcSize,arcSize,315,145)
-  arc(54,143,arcSize,arcSize,145,315)
-  arc(17,177,arcSize,arcSize,315,145)
+  arc(70,130,arcSize,arcSize,145,315)
+  arc(33,164,arcSize,arcSize,315,145)
   
+  strokeWeight(1)
+  
+   if (gallifreyan === 1){
+    
+    drawGallifreyan()
+
+   }
+
   
 
   strokeWeight(1)
@@ -84,7 +91,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   }
 
-  if (tS <2.5) {
+  if (tS <2.5) {//changes fill to pink if Tardis is smaller than 2.5
 
     fill(203, 20, 65)
 
@@ -223,10 +230,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
  drawStar1()
  drawStar2()
- if(starTwoX =>100){
-
-  drawStar3()  
- }
+ drawStar3()  
+ 
  
 //  beginShape() //lightning
 
@@ -244,11 +249,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 // endShape(CLOSE)
 
-beginShape() //lightning
+ 
 
-vertex
-
-endShape(CLOSE)
 
 }
 
@@ -303,3 +305,47 @@ function drawStar3() {
 
 }
 
+function drawGallifreyan(){
+  //gallifreyan writing
+  noFill()
+  arc(100,100,150,150,188,120)
+  arc(20,140,100,100,277,30)
+  ellipse(100,100,160)
+  ellipse(39,94,6)
+  //first "word"
+  arc(100,140,50,50,90,46)
+  arc(110,165,20,20,180,315)
+  ellipse(110,162,4)
+  line(109,160,90,117)
+  ellipse(112,135,20)
+  ellipse(112,135,4)
+  line(103,140,80,155)
+  line(112,145,112,155)
+  line(103,130,85,120)
+  //second "word"
+  arc(145,95,40,40,300,277)
+  ellipse(145,120,4)
+  ellipse(152,101,15)
+  line(145,105,131,109)
+  arc(149,83,15,15,317,260)
+  fill(0)
+  ellipse(153,85,2)
+  ellipse(151,88,1)
+  ellipse(153,81,3)
+  noFill()
+  //third "word"
+  arc(90,60,60,60,120,60)
+  arc(90,100,40,40,224,316)
+  line(83,81,65,44)
+  line(97,81,100,75)
+  line(90,80,90,53)
+  ellipse(105,63,25)
+  ellipse(123,70,4)
+  ellipse(84,45,20)
+  fill(0)
+  ellipse(80,39,1)
+  ellipse(78,43,2)
+  ellipse(79,48,3)
+  ellipse(84,51,4)
+
+}
