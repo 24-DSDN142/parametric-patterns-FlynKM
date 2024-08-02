@@ -2,7 +2,7 @@
 let rect_width  = 20;
 let rect_height = 20;
 let tardisBlue = "#003b6f";
-let tS = 2.4; //tardis Size
+let tS = 2.5; //tardis Size
 let tY = 25 //tardis location y
 let tX = 25  //tardis location x
 let starOneX = 160//star location
@@ -20,7 +20,7 @@ let bgColour = "#43109a"
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_PORTRAIT);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
   
  
 
