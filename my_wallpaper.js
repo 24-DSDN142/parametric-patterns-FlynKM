@@ -2,7 +2,7 @@
 let rect_width  = 20;
 let rect_height = 20;
 let tardisBlue = "#003b6f";//003b6f
-let tS = 5.5; //tardis Size
+let tS = 2.5; //tardis Size
 let tY = 25 //tardis location y
 let tX = 25  //tardis location x
 let starOneX = 160//star locations 160
@@ -11,14 +11,14 @@ let starTwoX = 10 //10
 let starTwoY = 20 //20
 let starThreeX = 190 //190
 let starThreeY = 130 //130
-let arcSize = 90//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let arcSize = 50//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
 let bgColour = "#43109a" //#43109a
-let gallifreyan = 2
+let gallifreyan = 1
 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
   
  
