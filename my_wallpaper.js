@@ -1,22 +1,22 @@
 //your parameter variables go here!
 let tardisBlue = "#003b6f";//003b6f
-let tS = 4.5; //tardis Size
+let tS = 2.5; //tardis Size
 let tY = 25 //tardis location y
 let tX = 25  //tardis location x
-let starOneX = 10//star locations 160
-let starOneY = 130 //140
+let starOneX = 160//star locations 160
+let starOneY = 140 //140
 let starTwoX = 10 //10
 let starTwoY = 20 //20
-let starThreeX = 100 //190
-let starThreeY = 150 //130
-let arcSize = 100//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let starThreeX = 190 //190
+let starThreeY = 130 //130
+let arcSize = 50//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
 let bgColour = "#43109a" //#43109a
-let gallifreyan = 2 //changes if gallifreyan is visible or not
+let gallifreyan = 1 //changes if gallifreyan is visible or not
 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(A3);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
   
  
