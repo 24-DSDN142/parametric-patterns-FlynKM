@@ -10,13 +10,19 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let tardisBlue = "#003b6f";//003b6f
+let tS = 2.5; //tardis Size
+let tY = 25 //tardis location y
+let tX = 25  //tardis location x
+let starOneX = 160//star locations 160
+let starOneY = 140 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 190 //190
+let starThreeY = 130 //130
+let arcSize = 50//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#43109a" //#43109a
+let gallifreyan = 1 //changes if gallifreyan is visible or not
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -34,13 +40,231 @@ function setup_wallpaper(pWallpaper) {
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let tardisBlue = "#003b6f";//003b6f
+let tS = 2.49; //tardis Size
+let tY = 25 //tardis location y
+let tX = 25  //tardis location x
+let starOneX = 160//star locations 160
+let starOneY = 140 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 190 //190
+let starThreeY = 130 //130
+let arcSize = 50//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#43109a" //#43109a
+let gallifreyan = 1 //changes if gallifreyan is visible or not
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 3:
+
+//your parameter variables go here!
+let tardisBlue = "#003b6f";//003b6f
+let tS = 2.49; //tardis Size
+let tY = 25 //tardis location y
+let tX = 25  //tardis location x
+let starOneX = 160//star locations 160
+let starOneY = 140 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 190 //190
+let starThreeY = 120 //130
+let arcSize = 90//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#43109a" //#43109a
+let gallifreyan = 2 //changes if gallifreyan is visible or not
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 4:
+
+//your parameter variables go here!
+let tardisBlue = "#003b6f";//003b6f
+let tS = 5.5; //tardis Size
+let tY = 25 //tardis location y
+let tX = 25  //tardis location x
+let starOneX = 10//star locations 160
+let starOneY = 130 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 100 //190
+let starThreeY = 150 //130
+let arcSize = 90//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#43109a" //#43109a
+let gallifreyan = 2 //changes if gallifreyan is visible or not
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 5:
+
+//your parameter variables go here!
+let tardisBlue = "#003b6f";//003b6f
+let tS = 5.5; //tardis Size
+let tY = 25 //tardis location y
+let tX = 25  //tardis location x
+let starOneX = 10//star locations 160
+let starOneY = 130 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 100 //190
+let starThreeY = 150 //130
+let arcSize = 90//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#000000" //#43109a
+let gallifreyan = 2 //changes if gallifreyan is visible or not
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 6:
+
+//your parameter variables go here!
+let tardisBlue = "#003b6f";//003b6f
+let tS = 4.5; //tardis Size
+let tY = 25 //tardis location y
+let tX = 25  //tardis location x
+let starOneX = 10//star locations 160
+let starOneY = 130 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 100 //190
+let starThreeY = 150 //130
+let arcSize = 100//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#43109a" //#43109a
+let gallifreyan = 2 //changes if gallifreyan is visible or not
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 7:
+
+//your parameter variables go here!
+let tardisBlue = "#003b6f";//003b6f
+let tS = 2.0; //tardis Size
+let tY = 35 //tardis location y
+let tX = 35  //tardis location x
+let starOneX = 10//star locations 160
+let starOneY = 130 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 100 //190
+let starThreeY = 150 //130
+let arcSize = 100//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#43109a" //#43109a
+let gallifreyan = 2 //changes if gallifreyan is visible or not
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 8:
+
+//your parameter variables go here!
+let tardisBlue = "#003b6f";//003b6f
+let tS = 4.5; //tardis Size
+let tY = 25 //tardis location y
+let tX = 25  //tardis location x
+let starOneX = 10//star locations 160
+let starOneY = 130 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 100 //190
+let starThreeY = 150 //130
+let arcSize = 50//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#43109a" //#43109a
+let gallifreyan = 1 //changes if gallifreyan is visible or not
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 9:
+
+//your parameter variables go here!
+let tardisBlue = "#003b6f";//003b6f
+let tS = 5.5; //tardis Size
+let tY = 25 //tardis location y
+let tX = 25  //tardis location x
+let starOneX = 10//star locations 160
+let starOneY = 130 //140
+let starTwoX = 10 //10
+let starTwoY = 20 //20
+let starThreeX = 100 //190
+let starThreeY = 150 //130
+let arcSize = 50//changes width and height of arcs that make up the squiggle. if set to 50, arcs will align properly
+let bgColour = "#43109a" //#43109a
+let gallifreyan = 2 //changes if gallifreyan is visible or not
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
